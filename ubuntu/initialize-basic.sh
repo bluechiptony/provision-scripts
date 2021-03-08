@@ -3,11 +3,11 @@
 #docker 
 echo "Installing Docker ..." &&
 sudo apt update &&
-sudo apt install apt-transport-https ca-certificates curl software-properties-common &&
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y &&
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - &&
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" &&
 sudo apt update &&
-sudo apt install docker-ce &&
+sudo apt install docker-ce -y &&
 sudo usermod -aG docker ${USER} &&
 echo "Docker install complete !" &&
 
@@ -21,13 +21,13 @@ echo "Docker compose install complete !" &&
 #nginx 
 echo "Installing nginx ..." &&
 sudo apt update &&
-sudo apt install nginx &&
+sudo apt install nginx -y&&
 echo "Nginx install complete !" &&
 
 
 #Certbot
 echo "Installing certbot ..." &&
-sudo apt install certbot python3-certbot-nginx &&
+sudo apt install certbot python3-certbot-nginx -y &&
 echo "Certbot install complele ..."
 
 
