@@ -8,6 +8,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - &&
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" &&
 sudo apt update &&
 sudo apt install docker-ce -y &&
+sudo systemctl enable docker &&
 sudo usermod -aG docker ${USER} &&
 echo "Docker install complete !" &&
 
@@ -21,7 +22,8 @@ echo "Docker compose install complete !" &&
 #nginx 
 echo "Installing nginx ..." &&
 sudo apt update &&
-sudo apt install nginx -y&&
+sudo apt install nginx -y &&
+sudo systemctl enable nginx &&
 echo "Nginx install complete !" &&
 
 
