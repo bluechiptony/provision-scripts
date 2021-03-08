@@ -7,6 +7,9 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb
 sudo apt update &&
 sudo apt install mongodb-org &&
 echo "Installing mongo DB" &&
-echo "InstaStarting service mongo DB" &&
+echo "Starting service mongo DB" &&
 sudo systemctl start mongod.service &&
 sudo systemctl enable mongod 
+echo "Showing service mongo DB status" &&
+sudo systemctl status mongod
+
