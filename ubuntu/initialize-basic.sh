@@ -24,5 +24,11 @@ sudo apt install nginx &&
 echo "Nginx install complete !" &&
 
 
+#Certbot
+echo "Installing certbot ..."
+sudo apt install certbot python3-certbot-nginx &&
+echo "Certbot install complele ..."
+
+
 
 
